@@ -1,7 +1,11 @@
-### ❓ Question:
+### ❓ 1. Question:
 Find the missing number from an array containing numbers from 1 to n with one number missing.
 
-## Code
+---
+
+### ✅ Solution (Java)
+
+```java
 class Solution {
     int missingNum(int arr[]) {
         int n = arr.length + 1;
@@ -15,7 +19,9 @@ class Solution {
         return (int) (sum - sumArr);
     }
 }
------------------------------------------------------------------------------------------------------------------
+```
+---
+
 
 ### ❓ Question:
 You are given an array arr of positive integers. Your task is to find all the leaders in the array. An element is considered a leader if it is greater than or equal to all elements to its right. The rightmost element is always a leader.
