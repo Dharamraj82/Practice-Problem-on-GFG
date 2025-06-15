@@ -1,7 +1,11 @@
+### 🔎 Search Question on GFG and find more about it....
+
 ## ❓ 1. Question:
+
 ### Find the missing number from an array containing numbers from 1 to n with one number missing.
 
 # Code
+
 ```java
 class Solution {
     int missingNum(int arr[]) {
@@ -17,12 +21,15 @@ class Solution {
     }
 }
 ```
+
 ---
 
 ## ❓ 2. Question:
+
 ### Given an array arr of integers, find all the elements that occur more than once in the array. If no element repeats, return an empty array.
 
-# Code
+#Code
+
 ```java
 class Solution {
 public:
@@ -45,5 +52,73 @@ vector<int> v;
 }
 };
 ```
+
 ---
 
+## ❓ 3. Question:
+
+### You are given an array arr of positive integers. Your task is to find all the leaders in the array. An element is considered a leader if it is greater than or equal to all elements to its right. The rightmost element is always a leader.
+
+#Code
+
+```java
+// This Is not a optimal solution its TC = 0(n^2)
+class Solution {
+    static ArrayList<Integer> leaders(int arr[]) {
+        // code here
+        ArrayList<Integer> al = new ArrayList<>();
+        int n = arr.length;
+        int i, j;
+       for(i = 0; i < n; i++) {
+    for(j = i+1; j < n; j++) {
+        if(arr[i] < arr[j]) break;
+    }
+    if(j == n) al.add(arr[i]);
+        }
+           return al;
+        }
+}
+```
+
+```java
+// This Is  a optimal solution its TC = 0(n)
+
+class Solution {
+    static ArrayList<Integer> leaders(int arr[]) {
+        // code here
+        ArrayList<Integer> al = new ArrayList<>();
+
+      int n = arr.length;
+    int lastElem = arr[n - 1]; // Last elem is always greater
+    al.add(lastElem);
+
+    // Starts from end 
+    for (int i = n - 2; i >= 0; i--) {
+        if (arr[i] >= lastElem) {
+            lastElem = arr[i];  //update elem
+            al.add(lastElem);
+        }
+    }
+
+    Collections.reverse(al);
+    return al;
+    }
+}
+
+```
+---
+
+
+
+## ❓ 4. Question:
+
+### Given an unsorted array arr of positive integers. One number a from the set [1, 2,....,n] is missing and one number b occurs twice in the array. Find numbers a and b.
+
+Note: The test cases are generated such that there always exists one missing and one repeating number within the range [1,n].
+
+#Code
+
+```java
+
+```
+---
