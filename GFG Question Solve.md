@@ -22,7 +22,7 @@ class Solution {
 ## ❓ 2. Question:
 ### Given an array arr of integers, find all the elements that occur more than once in the array. If no element repeats, return an empty array.
 
-#Code
+# Code
 ```java
 class Solution {
 public:
