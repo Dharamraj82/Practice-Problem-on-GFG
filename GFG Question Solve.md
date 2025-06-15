@@ -119,6 +119,32 @@ Note: The test cases are generated such that there always exists one missing and
 #Code
 
 ```java
+class Solution {
+    // Function to find two elements in array
+    ArrayList<Integer> findTwoElement(int arr[]) {
+        // code here
+        int n = arr.length;
+        int [] app = new int [n+1];
+        int rep = -1;
+        int mis = -1;
+        
+        for(int i =0; i<n; i++){
+            app[arr[i]]++;
+        }
+        for(int i =1; i<=n; i++){
+            if(app[i] ==0){
+                mis = i;
+            }
+            else if(app[i] == 2){
+                rep =i;
+            }
+        }
+        ArrayList<Integer> res = new ArrayList<>();
+        res.add(rep);
+        res.add(mis);
+        return res;
+    }
+}
 
 ```
 ---
