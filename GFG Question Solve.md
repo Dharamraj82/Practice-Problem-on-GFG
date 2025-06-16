@@ -180,3 +180,56 @@ class Solution {
 }
 ```
 ---
+
+
+## ❓ 6. Question:
+
+### Given a sorted array arr and an integer k, find the position(0-based indexing) at which k is present in the array using binary search.
+
+Note: If multiple occurrences are there, please return the smallest index.
+#Code
+
+```java
+// Arrays.binarySearch() does not guarantee returning the first index of a duplicate element.
+import java.util.Arrays;
+class Solution {
+    public int binarysearch(int[] arr, int k) {
+        int res =  Arrays.binarySearch(arr, k);
+        return (res>=0) ? res : -1;
+    }
+}
+```
+
+```java
+// A custom binary search that finds the first occurrence of k.
+import java.util.Arrays;
+class Solution {
+    public int binarysearch(int[] arr, int k) {
+       
+class Solution {
+    public int binarysearch(int[] arr, int k) {
+        int n = arr.length;
+       int beg = 0;
+       int end = n-1;
+       int res = -1;
+       while( beg<=end ){
+           int mid = (beg+end)/2;
+           if (arr[mid] == k) {             
+                res = mid;                  // ⬜ As we study here should be { return mid }
+                end = mid - 1;              // ⬜ But there is a problem does not guarantee returning the first index of 
+                                            //     a duplicate element.
+            }
+           else if(k < arr[mid]){
+               end = mid-1;
+           }
+           else{
+               beg = mid+1;
+           }
+       }
+       return res;
+    }
+}
+    }
+}
+```
+---
