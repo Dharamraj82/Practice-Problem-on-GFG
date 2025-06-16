@@ -181,6 +181,30 @@ class Solution {
 ```
 ---
 
+### Given an array arr[]. Rotate the array to the right by d steps, where d is a positive integer. 
+
+#Code
+
+```java
+public static void RightRotate(int arr[], int n, int k) {
+        k = k % n;
+        int[] temp = new int[k];
+        // Copy from end of original array
+        for (int i = 0; i < k; i++) {
+            temp[i] = arr[n - k + i];
+        }
+        // Step 2: Shift remaining elements to the right
+        for (int i = n - 1; i >= k; i--) {
+            arr[i] = arr[i - k];
+        }
+        // Step 3: Copy temp elements to the front
+        for (int i = 0; i < k; i++) {
+            arr[i] = temp[i];
+        }
+    }
+}
+```
+---
 
 ## ❓ 6. Question:
 
