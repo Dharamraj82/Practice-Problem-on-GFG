@@ -82,7 +82,7 @@ class Solution {
         }
 }
 ```
-
+⚠️
 ```java
 // This Is  a optimal solution its TC = 0(n)
 
@@ -181,7 +181,7 @@ class Solution {
 ```
 ---
 
-### Given an array arr[]. Rotate the array to the right by d steps, where d is a positive integer. 
+⏭️⏭️ ### Given an array arr[]. Rotate the array to the right by d steps, where d is a positive integer. 
 
 #Code
 
@@ -223,7 +223,7 @@ class Solution {
     }
 }
 ```
-
+⚠️
 ```java
 // A custom binary search that finds the first occurrence of k.
 import java.util.Arrays;
