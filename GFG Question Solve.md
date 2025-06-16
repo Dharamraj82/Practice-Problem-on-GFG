@@ -181,7 +181,7 @@ class Solution {
 ```
 ---
 
-⏭️⏭️ ### Given an array arr[]. Rotate the array to the right by d steps, where d is a positive integer. 
+ ### ⏭️⏭️ Given an array arr[]. Rotate the array to the right by d steps, where d is a positive integer. 
 
 #Code
 
