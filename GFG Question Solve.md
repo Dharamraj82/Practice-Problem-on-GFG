@@ -1,3 +1,6 @@
+## Only 10 Questions Here 
+---
+---
 ### 🔎 Search Question on GFG and find more about it....
 
 ## ❓ 1. Question:
