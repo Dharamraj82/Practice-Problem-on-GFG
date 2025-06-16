@@ -148,3 +148,32 @@ class Solution {
 
 ```
 ---
+
+## ❓ 5. Question:
+
+### Given an array arr[]. Rotate the array to the left (counter-clockwise direction) by d steps, where d is a positive integer. Do the mentioned change in the array in place.
+
+Note: Consider the array as circular.
+#Code
+
+```java
+// this is not a optimal solution...
+class Solution {
+    // Function to rotate an array by d elements in counter-clockwise direction.
+    static void rotateArr(int arr[], int d) {
+       int n= arr.length;
+       d = d%n;
+      int[] temp = new int[d];
+        for(int i =0; i<d; i++){
+            temp[i] = arr[i];
+        }
+        for(int i =d; i<n; i++){
+            arr[i-d] = arr[i];
+        }
+        for(int i =n-d; i<n; i++){
+            arr[i] = temp[i-(n-d)];
+        }
+    }
+}
+```
+---
