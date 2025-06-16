@@ -215,8 +215,8 @@ class Solution {
        while( beg<=end ){
            int mid = (beg+end)/2;
            if (arr[mid] == k) {             
-                res = mid;                  // ⬜ As we study here should be { return mid }
-                end = mid - 1;              // ⬜ But there is a problem does not guarantee returning the first index of 
+                res = mid;                  // ✅ As we study here should be { return mid }
+                end = mid - 1;              // ✅ But there is a problem does not guarantee returning the first index of 
                                             //     a duplicate element.
             }
            else if(k < arr[mid]){
