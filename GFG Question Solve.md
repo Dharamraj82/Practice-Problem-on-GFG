@@ -268,6 +268,15 @@ Follow up: Don't solve it using the inbuilt sort function.
 #code
 
 ```java
+// But Solution doesn't valid as question so use differnt approach..
+class Solution {
+       public static int kthSmallest(int[] arr, int k) {
+        Arrays.sort(arr);
+        return arr[k-1];
+    }
+}
+```
+```java
 class Solution {
     
 }
