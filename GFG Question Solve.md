@@ -82,7 +82,7 @@ class Solution {
         }
 }
 ```
-⚠️
+
 ```java
 // This Is  a optimal solution its TC = 0(n)
 
@@ -181,30 +181,6 @@ class Solution {
 ```
 ---
 
- ### ⏭️⏭️ Given an array arr[]. Rotate the array to the right by d steps, where d is a positive integer. 
-
-#Code
-
-```java
-public static void RightRotate(int arr[], int n, int k) {
-        k = k % n;
-        int[] temp = new int[k];
-        // Copy from end of original array
-        for (int i = 0; i < k; i++) {
-            temp[i] = arr[n - k + i];
-        }
-        // Step 2: Shift remaining elements to the right
-        for (int i = n - 1; i >= k; i--) {
-            arr[i] = arr[i - k];
-        }
-        // Step 3: Copy temp elements to the front
-        for (int i = 0; i < k; i++) {
-            arr[i] = temp[i];
-        }
-    }
-}
-```
----
 
 ## ❓ 6. Question:
 
@@ -223,7 +199,7 @@ class Solution {
     }
 }
 ```
-⚠️
+
 ```java
 // A custom binary search that finds the first occurrence of k.
 import java.util.Arrays;
@@ -239,8 +215,8 @@ class Solution {
        while( beg<=end ){
            int mid = (beg+end)/2;
            if (arr[mid] == k) {             
-                res = mid;                  // ✅ As we study here should be { return mid }
-                end = mid - 1;              // ✅ But there is a problem does not guarantee returning the first index of 
+                res = mid;                  // ⬜ As we study here should be { return mid }
+                end = mid - 1;              // ⬜ But there is a problem does not guarantee returning the first index of 
                                             //     a duplicate element.
             }
            else if(k < arr[mid]){
@@ -257,3 +233,68 @@ class Solution {
 }
 ```
 ---
+
+## ❓ 7. Question:
+
+### Given a number n, find the value of n raised to the power of its own reverse.
+#code
+
+```java
+class Solution {
+    public int reverseExponentiation(int n) {
+        // code here
+        int rev = 0; 
+        int m = n;
+        int power = 1;
+        while(n>0){
+           int ld = n%10;
+            n = n/10;
+            rev = (rev*10)+ld;
+        }
+        for(int i = 0; i<rev; i++){
+            power *=m;
+        }
+        return power;
+    }
+}
+```
+---
+
+## ❓ 8. Question:
+
+### Given an array arr[] and an integer k where k is smaller than the size of the array, your task is to find the kth smallest element in the given array.
+
+Follow up: Don't solve it using the inbuilt sort function.
+#code
+
+```java
+class Solution {
+    
+}
+```
+---
+## ❓ 9. Question:
+
+### ...
+#code
+
+```java
+class Solution {
+    
+}
+```
+---
+## ❓ 10. Question:
+
+### .....
+
+#code
+
+```java
+class Solution {
+    
+}
+```
+---
+
+### The End Go To Next Page ....
